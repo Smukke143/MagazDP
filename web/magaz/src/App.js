@@ -1,23 +1,32 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+
 import { Header } from  "./comp/Header";
+import { Main } from "./pages/Main";
 import { Footer } from "./comp/Footer";
-import { Content } from "./comp/Content";
+import { NotFound } from "./comp/NotFound";
+import { FAQ } from "./pages/FAQ";
+
 import "./styles.css"
 
 function App() {
-const items = [
-  {id: 1, src: require('./assets/12.png'), alt:"Hoodiey", price: "2399", title: "ANTHONY BELLESED Hoodie Ecorche"},
-  {id: 2, src: require('./assets/12.png'), alt:"Hoodiey", price: "1990", title: "WTF HOODYI"},
-  {id: 3, src: require('./assets/12.png'), alt:"Hoodiey", price: "1990", title: "WTF HOODYI"},
-  {id: 4, src: require('./assets/12.png'), alt:"Hoodiey", price: "1990", title: "WTF HOODYI"},
-  {id: 5, src: require('./assets/12.png'), alt:"Hoodiey", price: "1990", title: "WTF HOODYI"},
-  {id: 6, src: require('./assets/12.png'), alt:"Hoodiey", price: "1990", title: "WTF HOODYI"},
-];
+
+
   return (
     <>
-      <Header />
-      <Content items={items} />
-      <Footer />
+    <Header />
+    <Router>
+        <Routes>
+            <Route exact path="/" element={<Main />} />
+            <Route  path="/FAQ" element={<FAQ />} />
+            <Route path="/*" element={<NotFound />} />
+        </Routes>
+    </Router>
+    <Footer />
     </>
   );
 }

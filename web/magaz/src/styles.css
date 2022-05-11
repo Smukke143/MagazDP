@@ -186,3 +186,11 @@ footer{
 .Card__caption>p::after{
     content: ' руб.';
 }
+.NotFound{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
