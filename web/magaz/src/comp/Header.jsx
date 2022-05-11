@@ -11,8 +11,8 @@ export const Header = () => {
                 <button className="Header__btn"><FontAwesomeIcon className="btn__ico" icon={faUser}/> Личный кабинет</button>
                 <a href="/"><img className="Header__logo" src={Logo} alt="logo" /></a>
                 <button className="Header__btn">Корзина<FontAwesomeIcon className="btn__ico" icon={faFileText} /></button>
-            </header>
             <Nav />
+            </header>
         </>
     );
 };

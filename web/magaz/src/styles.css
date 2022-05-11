@@ -13,13 +13,16 @@
 header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     margin-top: 10px;
 }
 header>img{
     cursor: pointer;
+}
+header>a{
+    margin: 0 10%;
 }
 .Header__btn{
     display: flex;
@@ -32,7 +35,6 @@ header>img{
     width: 190px;
     height: 50px;
     padding: 20px;
-    margin: 40px;
     font-size: 13px;
     font-weight: 700;
     cursor: pointer;
@@ -44,21 +46,29 @@ header>img{
     box-shadow: none;
     background: #7b7b7b;
 }
+.Header__btn:active{
+    filter: invert(100%);
+}
+
 .btn__ico{
     font-size: 30px;
     width: 35px;
 }
 nav{
+    width: 80%;
+    height: 55px;
     display: flex;
-    text-align: center;
     justify-content: space-around;
+    align-items: center;
     flex-direction: row;
-    margin-top: 80px;
+    text-align: center;
+    margin: 40px 0 30px 0;
     border-top: 1px solid;
     border-bottom: 1px solid;
     padding: 10px;
 }
 nav>h1{
+    color: #333333;
     cursor: pointer;
     font-weight: 400;
     transition: all 0.3s;
@@ -71,4 +81,108 @@ nav>h1:hover{
 nav>h1>a{
     color: inherit;
     text-decoration: none;
+}
+footer{
+    width: 100%;
+    height: 250px;
+}
+.Footer__form{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Footer__form>input{
+    width: 40%;
+    border-radius: 90px;
+    border: 2px solid #333333;
+    padding: 10px 0 10px 20px;
+    margin: 10px;
+}
+.Footer__form>button{
+    background: #333333;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    border: 2px solid #333333;
+    outline: none;
+    transition: all 0.2s cubic-bezier(0.01, 0.7, 1, 1);;
+    margin-top: 20px;
+}
+.Footer__form>button:hover {
+    background: #4D4D4D;
+    border: 2px solid #333333;
+}
+.Footer__form>button:focus {
+    background: #4D4D4D;
+    border: 2px solid #333333;
+}
+.Footer__form>button:active{
+    filter: invert(100%);
+}
+.Footer__content{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.Footer__payment-system, .Footer__contacts{
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+.Footer__payment-system>img{
+    cursor: pointer;
+}
+.Footer__contacts{
+    justify-content: center;
+}
+.Footer__contacts>img{
+    margin: 10px;
+    cursor: pointer;
+    width: 30px;
+}
+.Footer__content{
+    display: flex;
+    align-items: center;
+}
+.Footer__content>a{
+    color: inherit;
+}
+.Content{
+    margin: 0 0 10% 10%;
+    width: 80%;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    justify-content: space-around;
+    justify-items: center;
+    gap: 20px;
+}
+.Content__card{
+    background-image: url("./assets/no-image.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 300px;
+    height: 450px;
+    cursor: pointer;
+}
+.Card__caption{
+    width: inherit;
+    height: 50px;
+    bottom: 50px;
+    position: relative;
+    font-size: 12px;
+    font-weight: 600;
+}
+.Card__caption>p::after{
+    content: ' руб.';
 }
