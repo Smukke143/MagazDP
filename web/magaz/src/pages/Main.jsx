@@ -1,5 +1,7 @@
 import React from "react";
 import { Content } from "../comp/Content";
+import { Form } from "../comp/Form";
+import { Nav } from "../comp/Nav";
 
 export const Main = () =>{
 const items = [
@@ -8,8 +10,12 @@ const items = [
     {id: 3, src: require('../assets/12.png'), alt:"Hoodiey", price: "1990", title: "WTF HOODYI"},
     {id: 4, src: require('../assets/12.png'), alt:"Hoodiey", price: "1990", title: "WTF HOODYI"},
     {id: 5, src: require('../assets/12.png'), alt:"Hoodiey", price: "1990", title: "WTF HOODYI"},
-    {id: 6, src: require('../assets/12.png'), alt:"Hoodiey", price: "1990", title: "WTF HOODYI"},
+    {id: 6, price: "1990", title: "WTF HOODYI"},
     ];
 
-    return <Content items={items} />
+    return <>
+        <Nav />
+        <Content items={items} />
+        <Form />
+    </>
 };
