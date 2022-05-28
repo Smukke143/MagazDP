@@ -190,7 +190,7 @@ footer{
 
 .Content__card:hover{
     opacity: 0.7;
-    transform: scale(120%);
+    transform: scale(110%);
 }
 .Card__caption{
     width: inherit;
@@ -215,9 +215,57 @@ footer{
 .Cart__Wrapper{
     display: flex;
     flex: 1;
+    flex-direction: column;
+    align-items: center;
     height: 100%;
     width: 100%;
+}
+.Cart__Conteiner{
+    width: 80%;
+    font-weight: 400;
+    border-spacing: 0 10px
+}
+.Cart__Header, .Cart__Content{
+    text-align: center;
+}
+.Cart__Content>td{
+
+}
+.Cart__Content>td>img{
+    width: 30%;
+}
+.Price::after{
+    content: " руб.";
+}
+
+.Admin__Wrapper{
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+}
+.Admin__Form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    gap: 10px;
+
+}
+.Admin__Form>span{
+    color: red;
+}
+.Admin__Form>input{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px;
+    width: 50%;
+}
+.Admin__Form>input:last-child{
+    display: flex;
+    align-items: center;
 }
 @media screen and (max-width: 900px) {
     .Content {
@@ -256,5 +304,8 @@ footer{
 
     nav>h1{
         font-size: 20px;
+    }
+    .Admin__Form>input{
+        width: 80%;
     }
 }
