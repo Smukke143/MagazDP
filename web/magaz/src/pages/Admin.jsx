@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 export const Admin = () =>{
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
 
     return(
@@ -18,7 +18,8 @@ export const Admin = () =>{
                             message: "Кол-во символов меньше 5"
                         }
                     })} 
-                    placeholder="Email*" 
+                    placeholder="Email*"
+                    name="email"
                     />
                     <span>{errors.email?.message}</span>
                 <input 
@@ -32,6 +33,7 @@ export const Admin = () =>{
                     })} 
                     type="password" 
                     placeholder="Password*"
+                    name="password"
                 />
                 <span>{errors.password?.message}</span>
                 <input type="submit" text="Войти"/>

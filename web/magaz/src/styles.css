@@ -239,9 +239,9 @@ footer{
 }
 
 .Admin__Wrapper{
+    margin-top: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex: 1;
     width: 100%;
 }
@@ -259,7 +259,6 @@ footer{
 .Admin__Form>input{
     display: flex;
     flex-direction: column;
-    margin: 5px;
     padding: 10px;
     width: 50%;
 }
@@ -267,6 +266,44 @@ footer{
     display: flex;
     align-items: center;
 }
+
+.Product__Wrapper{
+    border-top: 1px solid #333333;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 80%;
+}
+
+.Product__Content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.Product__ID{
+    color:#6D6D6D;
+}
+.Product__Caption{
+    display: flex;
+    flex-direction: column;
+    
+}
+.Product__Caption>h2{
+    margin-bottom: 40px;
+}
+.Product__Caption>.Price{
+    font-size: 32px;
+}
+.Product__Materials{
+    list-style: none;
+    padding: 5px;
+    color: #6D6D6D;
+}
+
+
+
 @media screen and (max-width: 900px) {
     .Content {
         grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
