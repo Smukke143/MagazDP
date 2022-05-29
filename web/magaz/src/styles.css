@@ -280,6 +280,7 @@ footer{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 .Product__ID{
@@ -301,7 +302,20 @@ footer{
     padding: 5px;
     color: #6D6D6D;
 }
-
+.Product__Form>label{
+    display: flex;
+    align-items: center;
+}
+.Product__Form>input{
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+}
+.Product__Form>input:last-child{
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+}
 
 
 @media screen and (max-width: 900px) {

@@ -18,7 +18,7 @@ export const Product = () => {
                         <li>Плотность ткани: 460гр/м</li>
                         <li>Состав: 100% хлопок</li>
                     </ul>
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <form className="Product__Form" onSubmit={handleSubmit(onSubmit)}>
                         <label htmlFor="">Выберите размер:</label>
                         <input {...register("size")} 
                             type="radio"
@@ -40,7 +40,7 @@ export const Product = () => {
                             name="size" 
                             value="XL"
                         />
-                        <button type="sumbit">В корзину</button>
+                        <input type="button" value="В Корзину"/>
                     </form>
                 </div>
                     <div className="Product__ID">
